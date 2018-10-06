@@ -1,8 +1,9 @@
-import React from 'react'
-import { graphql } from "gatsby"
-import PostLink from "../components/postLink"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import PostLink from '../components/postLink';
 
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 const Blog = ({
   data: {
@@ -10,18 +11,27 @@ const Blog = ({
   },
 }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .filter(edge => !!edge.node.frontmatter.date)
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
 
-  return(
+  return (
     <Layout>
-      here's my postz
+      here is my postz
       <div>{Posts}</div>
     </Layout>
-    )
-}
+  );
+};
 
-export default Blog
+
+Blog.propTypes = {
+  data: PropTypes.shape({}),
+};
+
+Blog.defaultProps = {
+  data: {},
+};
+
+export default Blog;
 
 export const pageQuery = graphql`
   query {
@@ -38,4 +48,4 @@ export const pageQuery = graphql`
         }
       }
     }
-  }`
+  }`;

@@ -1,12 +1,25 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 const PostLink = ({ post }) => (
   <div>
     <Link to={post.frontmatter.path}>
-      {post.frontmatter.title} ({post.frontmatter.date})
+      {post.frontmatter.title}
+      {' '}
+(
+      {post.frontmatter.date}
+)
     </Link>
   </div>
-)
+);
 
-export default PostLink
+PostLink.propTypes = {
+  post: PropTypes.shape({}),
+};
+
+PostLink.defaultProps = {
+  post: {},
+};
+
+export default PostLink;

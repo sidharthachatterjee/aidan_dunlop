@@ -3,6 +3,7 @@ module.exports = {
     title: 'Aidan Dunlop',
   },
   plugins: [
+    'gatsby-plugin-eslint',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     'gatsby-transformer-remark',
