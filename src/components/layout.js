@@ -25,7 +25,9 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
+          
         >
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
