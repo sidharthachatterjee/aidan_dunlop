@@ -1,13 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Some stuff</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <h1>Who?</h1>
+    <p>I'm a software developer, currently at NOWTV. </p>
+    <p>Interested in Machine Learning, Computer Vision, IoT and all things tech. </p>
+    <p>Big fan of disco. </p>
+    {/* add spotify playlist link */}
   </Layout>
 )
 
