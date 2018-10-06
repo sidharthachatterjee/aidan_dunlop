@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import PostLink from '../components/postLink';
 
-import Layout from '../components/layout';
+import Layout from '../components/navigation/defaultLayout';
 
 const Blog = ({
   data: {
