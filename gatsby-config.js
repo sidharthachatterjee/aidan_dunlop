@@ -7,6 +7,7 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-twitter',
     'gatsby-transformer-remark',
     {
       resolve: 'gatsby-plugin-manifest',

@@ -26,7 +26,6 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         >
-          <script id="twitter-wjs" type="text/javascript" async defer src="https://platform.twitter.com/widgets.js" />
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
