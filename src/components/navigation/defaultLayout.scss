@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  // background-color: $peach;
-  // color: white;
+  background-color: $current-background-color;
+  color: $current-foreground-color;
 }
 
 a {
@@ -24,8 +24,9 @@ a {
   margin: 3rem auto;
   margin-top: 0;
   max-width: 800px;
-
-  h1 {
+  
+  h1, h2, h3, h4, h5 {
     margin: 0;
+    color: $current-foreground-color;
   }
 }
