@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: $current-secondary-background-color;
+  // background-color: $current-secondary-background-color;
   
   h1, ul, li {
     margin: 0;
@@ -23,9 +23,9 @@
     list-style-type: none;
   }
   
-  a {
-    color: $current-secondary-foreground-color;
-    // color: $current-foreground-color;
+   a {
+    // color: $link-color;
+    color: $current-foreground-color;
   }
 
   a:hover, a:active {

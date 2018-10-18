@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const Nav = ({ pages }) => (
   <ul>
     {pages.map(page => (
-      <li>
+      <li key={page.href}>
         <Link to={page.href} activeClassName="active">
           {page.title}
         </Link>

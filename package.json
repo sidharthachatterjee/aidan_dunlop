@@ -17,6 +17,7 @@
     "netlify-cms": "^2.1.2",
     "node-sass": "^4.9.3",
     "prop-types": "^15.6.2",
+    "randomcolor": "^0.5.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",

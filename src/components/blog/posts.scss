@@ -1,0 +1,7 @@
+.postList {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 426px) {
+    flex-direction: row;
+  }
+}
