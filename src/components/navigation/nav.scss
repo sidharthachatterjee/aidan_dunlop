@@ -1,0 +1,23 @@
+@import '../../styles/base.scss';
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+
+  li {
+    list-style-type: none;
+  }
+  
+   a {
+    color: $current-foreground-color;
+  }
+
+  a:hover, a:active {
+    color: $link-color;
+  }
+
+  .active {
+    color: $link-color;
+  }
+}

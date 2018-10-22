@@ -6,7 +6,7 @@ import Nav from './nav';
 import './header.scss';
 
 const pageConfig = [
-  { title: 'who?', href: '/' },
+  { title: 'cv', href: '/cv' },
   { title: 'blog', href: '/blog' },
   { title: 'projects', href: '/projects' },
   { title: 'contact', href: '/contact' },
