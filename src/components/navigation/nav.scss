@@ -3,21 +3,20 @@
 .nav {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
-
-  li {
-    list-style-type: none;
+  justify-content: center;
+  a + a {
+    margin-left: 10px;
   }
-  
-   a {
+  a {
     color: $current-foreground-color;
   }
 
   a:hover, a:active {
-    color: $link-color;
+    color: black;
   }
-
+  
   .active {
-    color: $link-color;
+    color: black;
+    text-decoration: underline;
   }
 }

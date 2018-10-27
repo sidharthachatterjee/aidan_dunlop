@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
@@ -7,9 +7,16 @@ import { StaticQuery, graphql } from 'gatsby';
 import Header from './header';
 import './defaultLayout.scss';
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
+class Layout extends Component {
+  componentDidMount() {
+    // console.log(this.props);
+  }
+
+  render() {
+    const { children } = this.props;
+    return (
+      <StaticQuery
+        query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
@@ -18,25 +25,28 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <Fragment>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div className="content">
-          {children}
-        </div>
-      </Fragment>
-    )}
-  />
-);
+        render={data => (
+          <Fragment>
+            <Helmet
+              title={data.site.siteMetadata.title}
+              meta={[
+                { name: 'description', content: 'Sample' },
+                { name: 'keywords', content: 'sample, something' },
+              ]}
+            >
+              <html lang="en" />
+            </Helmet>
+            <div className="background" />
+            <Header siteTitle={data.site.siteMetadata.title} />
+            <div className="content">
+              {children}
+            </div>
+          </Fragment>
+        )}
+      />
+    );
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

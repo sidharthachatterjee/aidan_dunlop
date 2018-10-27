@@ -12,9 +12,12 @@ html {
 }
 
 body {
+  // height: 100%;
+  // background-color: $current-background-color;
+  // color: $current-foreground-color;
   height: 100%;
-  background-color: $current-background-color;
-  color: $current-foreground-color;
+  background-color: #CC3148;
+  color: white;
 }
 
 a {
@@ -32,4 +35,17 @@ a {
     margin: 0;
     color: $current-foreground-color;
   }
+}
+
+.background {
+  // background-image: url('https://source.unsplash.com/featured/1600x900/?nature');
+  background-size: cover;
+  background-attachment: fixed;
+
+  position: fixed;
+  left: 0;
+  height: 100%;
+  right: 0;
+  z-index: -1;
+  filter: brightness(0.5);
 }
