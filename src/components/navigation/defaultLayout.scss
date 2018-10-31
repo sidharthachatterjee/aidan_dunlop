@@ -36,15 +36,3 @@ a {
     color: $current-foreground-color;
   }
 }
-
-.background {
-  background-size: cover;
-  background-attachment: fixed;
-
-  position: fixed;
-  left: 0;
-  height: 100%;
-  right: 0;
-  z-index: -1;
-  filter: brightness(0.5);
-}

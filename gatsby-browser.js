@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-import Background from './src/components/background';
+import Background from './src/components/background/background';
 
 const fetchBackground = () => axios.get('https://api.unsplash.com/photos/random', {
   params: {
