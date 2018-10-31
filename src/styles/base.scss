@@ -1,13 +1,29 @@
-// other imports
+// fallback tweet styles
 @import './tweets.scss';
 
 // colors
-$link-color: #fb251b;
+// TO DO try to auto generate these?
+$primary-background-color: #CC3148;
+$primary-foreground-color: white;
+$secondary-background-color: #242738;
+$secondary-foreground-color: #E0DBD4;
+$link-color: white;
 // $peach: #FA6650;
 // $light: #E0DBD4;
 // $main-brand: #1E2663;
 // $dark-accents: #5C7CB9;
 // $dark-shades: #242738;
+
+// somehow toggle between these?
+// $current-background-color: $secondary-background-color;
+// $current-foreground-color: $secondary-foreground-color;
+// $current-secondary-background-color: $primary-background-color;
+// $current-secondary-foreground-color: $primary-foreground-color;
+
+$current-background-color: $primary-background-color;
+$current-foreground-color: $primary-foreground-color;
+$current-secondary-background-color: $primary-background-color;
+$current-secondary-foreground-color: $primary-foreground-color;
 
 // dimensions
 $header-height: 100px;

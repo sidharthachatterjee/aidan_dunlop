@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-
+// import Background from '../background';
 import Header from './header';
 import './defaultLayout.scss';
 
@@ -28,6 +28,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
+        {/* <Background /> */}
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className="content">
           {children}

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import PostLink from '../components/postLink';
+import Posts from '../components/blog/posts';
 
 import Layout from '../components/navigation/defaultLayout';
 
@@ -9,20 +9,14 @@ const Blog = ({
   data: {
     allMarkdownRemark: { edges },
   },
-}) => {
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date)
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
-
-  return (
-    <Layout>
-      here is my postz
-      <div>{Posts}</div>
-    </Layout>
-  );
-};
-
-
+}) => (
+  <Layout>
+    <p>
+    stuff
+    </p>
+    <Posts data={edges} />
+  </Layout>
+);
 Blog.propTypes = {
   data: PropTypes.shape({}),
 };
@@ -39,7 +33,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 40)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             path

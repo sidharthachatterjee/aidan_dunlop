@@ -1,7 +1,6 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+const React = require('react');
+const Root = require('./src/components/root').default;
 
-// You can delete this file if you're not using it
+exports.wrapRootElement = ({ element }) => (//eslint-disable-line
+  <Root element={element} />
+);

@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import './nav.scss';
 
 const Nav = ({ pages }) => (
-  <ul>
+  <div className="nav">
     {pages.map(page => (
-      <li>
-        <Link to={page.href} activeClassName="active">
-          {page.title}
-        </Link>
-      </li>
+      <Link key={page.href} to={page.href} activeClassName="active">
+        {page.title}
+      </Link>
     ))}
-  </ul>
+  </div>
 );
 
 Nav.propTypes = {

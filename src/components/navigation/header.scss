@@ -7,30 +7,10 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
+  // background-color: $current-secondary-background-color;
+  
   h1, ul, li {
     margin: 0;
   }
-
-  ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-  }
   
-  li {
-    list-style-type: none;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  a:hover, a:focus, a:active {
-    color: $link-color;
-  }
-
-  .active {
-    color: $link-color;
-  }
 }
