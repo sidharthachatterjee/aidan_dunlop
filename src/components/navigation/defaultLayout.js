@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 // import Background from '../background';
 import Header from './header';
-import './defaultLayout.scss';
 
 const Layout = ({ children }) => (
   <StaticQuery

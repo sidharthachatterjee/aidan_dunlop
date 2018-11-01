@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './background.scss';
 
-const styles = {
+const styles = source => ({
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
   position: 'fixed',
@@ -11,10 +10,11 @@ const styles = {
   right: '0',
   zIndex: -'1',
   filter: 'brightness(0.5)',
-};
+  backgroundImage: `url(${source})`,
+});
 
 const Background = ({ source }) => (
-  <div style={{ ...styles, ...{ backgroundImage: `url(${source})` } }} />
+  <div style={styles(source)} />
 );
 
 export default Background;
