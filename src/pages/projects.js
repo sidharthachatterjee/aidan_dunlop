@@ -1,27 +1,26 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Posts from '../components/blog/posts';
-
 import Layout from '../components/navigation/defaultLayout';
+import Background from '../components/background/background'; // eslint-disable-line
 
 const Projects = ({
   data: {
     allMarkdownRemark: { edges },
+    backgroundImage,
   },
 }) => (
-  <Layout>
+  <Fragment>
+    <Layout backgroundSource={backgroundImage.childImageSharp.fluid}>
       here&apos;s my projects
-    <Posts data={edges} />
-  </Layout>
+      <Posts data={edges} />
+    </Layout>
+  </Fragment>
 );
 
 Projects.propTypes = {
-  data: PropTypes.shape({}),
-};
-
-Projects.defaultProps = {
-  data: {},
+  data: PropTypes.shape({}).isRequired,
 };
 
 export default Projects;
@@ -40,5 +39,8 @@ export const pageQuery = graphql`
           }
         }
       }
+    }
+    backgroundImage: file(relativePath: { eq: "background.jpg" }) {
+      ...BackgroundImage
     }
   }`;

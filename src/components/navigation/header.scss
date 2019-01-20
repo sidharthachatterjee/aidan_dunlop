@@ -4,13 +4,80 @@
   width: 100%;
   height: $header-height;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  // background-color: $current-secondary-background-color;
-  
+  padding: 0 65px 0px 20px;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
+
   h1, ul, li {
     margin: 0;
   }
+
+  a {
+    color: black;
+  }
   
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 15px;
+  top: 15px;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-burger-bars-hover {
+  background: $hover-link-color;
+}
+
+.bm-cross-button {
+  height: 36px !important;
+  width: 36px !important;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+  width: 5px !important;
+  height: 36px !important;
+}
+
+.bm-cross-button > span {
+  top: 2px !important;
+  right: 20px !important;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  top: 0;
+  height: 100%;
+}
+
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+.bm-item {
+  display: inline-block;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
 }

@@ -4,11 +4,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-eslint',
-    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-twitter',
     'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -18,7 +19,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/me.jpg', // This path is relative to the root of the site.
       },
     },
     {
@@ -32,6 +33,13 @@ module.exports = {
       options: {
         path: `${__dirname}/blog`,
         name: 'markdown-pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/images`,
+        name: 'images',
       },
     },
   ],

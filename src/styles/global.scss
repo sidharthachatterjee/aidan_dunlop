@@ -12,27 +12,33 @@ html {
 }
 
 body {
-  // height: 100%;
-  // background-color: $current-background-color;
-  // color: $current-foreground-color;
   height: 100%;
-  background-color: #CC3148;
-  color: white;
+  color: black;
+  background-color: white;
 }
 
 a {
   text-decoration: none;
   color: $link-color;
-
 }
 
+a:hover {
+  color: $hover-link-color;
+}
 .content {
-  margin: 0 auto;
+  margin: 0 20px;
   margin-top: 0;
-  max-width: 800px;
-  
+  height: calc(100% - #{$header-height});
   h1, h2, h3, h4, h5, p, img {
     margin: 0;
-    // color: $current-foreground-color;
+    color: black;
   }
+}
+
+#___gatsby, #___gatsby > * {
+  height: 100%;
+}
+
+::selection {
+  background: $hover-link-color;
 }

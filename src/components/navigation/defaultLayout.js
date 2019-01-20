@@ -2,10 +2,11 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-// import Background from '../background';
 import Header from './header';
+import '../../styles/global.scss';
+// import Background from '../background/background';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, showHeader }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -27,8 +28,8 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        {/* <Background /> */}
-        <Header siteTitle={data.site.siteMetadata.title} />
+        {/* <Background source={backgroundSource} /> */}
+        {showHeader && <Header siteTitle={data.site.siteMetadata.title} />}
         <div className="content">
           {children}
         </div>
@@ -39,6 +40,12 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  // backgroundSource: PropTypes.string.isRequired,
+  showHeader: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  showHeader: true,
 };
 
 export default Layout;
