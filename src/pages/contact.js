@@ -1,16 +1,10 @@
 import React, { Fragment } from 'react';
-import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 import Layout from '../components/navigation/defaultLayout';
 import Background from '../components/background/background'; // eslint-disable-line
 
-const Contact = ({
-  data: {
-    backgroundImage,
-  },
-}) => (
+const Contact = () => (
   <Fragment>
-    <Layout backgroundSource={backgroundImage.childImageSharp.fluid}>
+    <Layout>
       {'You can'}
       <ul>
         <li>
@@ -35,15 +29,3 @@ const Contact = ({
 );
 
 export default Contact;
-
-Contact.propTypes = {
-  data: PropTypes.shape({}).isRequired,
-};
-
-export const pageQuery = graphql`
-  query {
-    backgroundImage: file(relativePath: { eq: "background.jpg" }) {
-      ...BackgroundImage
-    }
-  }
-`;

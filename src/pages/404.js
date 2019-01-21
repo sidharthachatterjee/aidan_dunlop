@@ -1,29 +1,20 @@
 import React, { Fragment } from 'react';
-import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 import Layout from '../components/navigation/defaultLayout';
 import Background from '../components/background/background'; // eslint-disable-line
 
-const NotFoundPage = ({ data: { backgroundImage } }) => (
+const NotFoundPage = () => (
   <Fragment>
-    <Layout backgroundSource={backgroundImage.childImageSharp.fluid}>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Layout>
+      <h1>Page not found</h1>
+      <div style={{
+        width: '100%', height: '0', 'padding-bottom': '43%', position: 'relative',
+      }}
+      >
+        <iframe title="404" src="https://giphy.com/embed/3o7aTskHEUdgCQAXde" width="100%" height="100%" style={{ position: 'absolute' }} frameBorder="0" className="giphy-embed" allowFullScreen />
+      </div>
+      <p><a href="https://giphy.com/gifs/quentin-tarantino-pulp-fiction-vincent-vega-3o7aTskHEUdgCQAXde">via GIPHY</a></p>
     </Layout>
   </Fragment>
 );
 
 export default NotFoundPage;
-
-
-NotFoundPage.propTypes = {
-  data: PropTypes.shape({}).isRequired,
-};
-
-export const pageQuery = graphql`
-  query {
-    backgroundImage: file(relativePath: { eq: "background.jpg" }) {
-      ...BackgroundImage
-    }
-  }
-`;

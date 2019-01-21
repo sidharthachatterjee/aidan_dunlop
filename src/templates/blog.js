@@ -7,13 +7,12 @@ import Background from '../components/background/background'; // eslint-disable-
 export default function Template({
   data: {
     markdownRemark,
-    backgroundImage,
   },
 }) {
   const { frontmatter, html } = markdownRemark;
   return (
     <Fragment>
-      <Layout backgroundSource={backgroundImage.childImageSharp.fluid}>
+      <Layout>
         <div className="blog-post-container">
           <div className="blog-post">
             <h1>{frontmatter.title}</h1>
@@ -41,9 +40,6 @@ export const pageQuery = graphql`
         path
         title
       }
-    }
-    backgroundImage: file(relativePath: { eq: "background.jpg" }) {
-      ...BackgroundImage
     }
   }
 `;

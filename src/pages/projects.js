@@ -8,11 +8,10 @@ import Background from '../components/background/background'; // eslint-disable-
 const Projects = ({
   data: {
     allMarkdownRemark: { edges },
-    backgroundImage,
   },
 }) => (
   <Fragment>
-    <Layout backgroundSource={backgroundImage.childImageSharp.fluid}>
+    <Layout>
       here&apos;s my projects
       <Posts data={edges} />
     </Layout>
@@ -39,8 +38,5 @@ export const pageQuery = graphql`
           }
         }
       }
-    }
-    backgroundImage: file(relativePath: { eq: "background.jpg" }) {
-      ...BackgroundImage
     }
   }`;

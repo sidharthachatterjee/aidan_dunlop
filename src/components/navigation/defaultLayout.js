@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from './header';
 import '../../styles/global.scss';
-// import Background from '../background/background';
 
 const Layout = ({ children, showHeader }) => (
   <StaticQuery
@@ -28,7 +27,6 @@ const Layout = ({ children, showHeader }) => (
         >
           <html lang="en" />
         </Helmet>
-        {/* <Background source={backgroundSource} /> */}
         {showHeader && <Header siteTitle={data.site.siteMetadata.title} />}
         <div className="content">
           {children}
@@ -40,7 +38,6 @@ const Layout = ({ children, showHeader }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  // backgroundSource: PropTypes.string.isRequired,
   showHeader: PropTypes.bool,
 };
 
