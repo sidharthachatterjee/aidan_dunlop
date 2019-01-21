@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import Layout from '../components/navigation/defaultLayout';
-import Background from '../components/background/background'; // eslint-disable-line
 
 const NotFoundPage = () => (
   <Fragment>

@@ -9,7 +9,7 @@ const markdownSource = `I'm a Software Developer, currently at [NOW TV](https://
 In 2017 I graduated from [The University of Manchester](https://www.cs.manchester.ac.uk/) with a 1st Class BSc in Computer Science.\n
 I'm interested in Computer Vision, Medical Imaging, and other useful applications of Artificial Intelligence and Machine Learning. \n
 When I'm not staring at a screen, I enjoy climbing, swimming and disco music.\n
-Feel free to check out [my CV](/cv) or [email me](mailto:aidandunlop@gmail.com?subject=Hey Aidan!).`;
+Feel free to check out [my CV](/cv) or [email me](mailto:aidandunlop@gmail.com?subject=Hey%20Aidan!).`;
 
 function LinkRenderer({ href, children }) {
   return (
