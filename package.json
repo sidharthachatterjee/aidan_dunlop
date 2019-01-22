@@ -20,7 +20,7 @@
     "gatsby-source-unsplash": "^1.1.0",
     "gatsby-transformer-remark": "^2.1.6",
     "gatsby-transformer-sharp": "^2.1.8",
-    "netlify-cms": "^2.1.2",
+    "netlify-cms": "^2.3.3",
     "node-sass": "^4.9.4",
     "prop-types": "^15.6.2",
     "randomcolor": "^0.5.3",
